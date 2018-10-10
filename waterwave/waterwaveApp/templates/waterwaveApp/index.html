@@ -1,0 +1,24 @@
+<style>
+body {background-color: lightgreen}
+</style>
+
+<body>
+<h1 align="center">Water Wave Playlist</h1>
+<hr color="black">
+
+{% if waterwave_list %}
+<ul>
+    {% for waterwave in waterwave_list %}
+
+    <H3 align="center">Song: {{ waterwave.songName }}</H3>
+    <H5 align="center">Album: {{ waterwave.album }}</H5>
+    <H5 align="center">Artist: {{ waterwave.artist }}</H5>
+    <H5 align="center">Duration {{ waterwave.duration }} minutes</H5>
+    <H5 align="center">Rating {{ waterwave.rating }} stars</H5>
+    <hr color="black">
+    {% endfor %}
+</ul>
+{% else %}
+<p>No waterwaves are available.</p>
+{% endif %}
+</body>
